@@ -1,0 +1,14 @@
+<mat-progress-spinner
+  *ngIf="loading"
+  mode="indeterminate"
+></mat-progress-spinner>
+<app-search-bar
+  *ngIf="!loading"
+  (searchCity)="handleCitySearch($event)"
+></app-search-bar>
+<app-weather-card
+  *ngIf="!loading"
+  [weatherData]="weatherData"
+></app-weather-card>
+<app-aqi-card *ngIf="!loading" [aqiData]="aqiData"></app-aqi-card>
+<!-- <app-forecast-chart *ngIf="!loading" [forecastData]="forecastData"></app-forecast-chart> -->

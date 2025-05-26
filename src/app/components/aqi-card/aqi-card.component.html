@@ -1,0 +1,11 @@
+<mat-card *ngIf="aqiData">
+  <mat-card-title>Air Quality Index</mat-card-title>
+  <mat-card-content>
+    <p><strong>City:</strong> {{ aqiData.city.name }}</p>
+    <p>
+      <strong>AQI:</strong> {{ aqiData.aqi }} ({{ getAqiLevel(aqiData.aqi) }})
+    </p>
+    <p><strong>Dominant Pollutant:</strong> {{ aqiData.dominentpol }}</p>
+    <p><strong>Index:</strong> {{ aqiData.idx }}</p>
+  </mat-card-content>
+</mat-card>

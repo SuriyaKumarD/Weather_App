@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../src/assets/pexels-eberhardgross-844297.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+app-aqi-card > .mat-mdc-card {
+  max-width: 400px;
+  color: #121212;
+  margin: 10px !important;
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  padding: 20px !important;
+  border-radius: 30px !important;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+  background-image: url(../src/assets/pexels-pixabay-414634.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.dark-theme .mat-card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-theme .mat-toolbar {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-theme .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #ffffff;
+}
+
+body.dark-theme .mat-input-element {
+  color: #ffffff;
+}
+
+body.dark-theme .mat-button,
+body.dark-theme .mat-raised-button,
+.mat-mdc-raised-button {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.mat-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
