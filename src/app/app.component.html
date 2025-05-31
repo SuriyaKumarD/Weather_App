@@ -1,9 +1,32 @@
-<mat-toolbar color="primary">
-  <span class="text-center">Weather & AQI Dashboard</span>
-  <span class="spacer"></span>
-  <button mat-icon-button (click)="toggleDarkMode()">
-    <mat-icon>{{ isDarkMode ? "light_mode" : "dark_mode" }}</mat-icon>
-  </button>
-</mat-toolbar>
+<header class="header-container">
+  <mat-toolbar color="primary" class="toolbar-flex">
+    <div class="branding">
+      <mat-icon class="weather-icon">wb_sunny</mat-icon>
+      <span class="app-title">Weather & AQI Dashboard</span>
+    </div>
 
-<router-outlet></router-outlet>
+    <div class="toolbar-actions">
+      <button mat-button class="location-btn">
+        <mat-icon>location_on</mat-icon>
+        <span class="btn-text">Current Location</span>
+      </button>
+
+      <button
+        mat-icon-button
+        class="theme-toggle"
+        (click)="toggleDarkMode()"
+        [matTooltip]="
+          isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+        "
+      >
+        <mat-icon class="theme-icon">{{
+          isDarkMode ? "light_mode" : "dark_mode"
+        }}</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
